@@ -1,0 +1,160 @@
+/* ══ Font System ══════════════════════════════════════════════════════
+   Layer 1 — Primitive Tokens  (raw values; do not use in components)
+   Layer 2 — Semantic Tokens   (use var(--font-*) in component styles)
+══════════════════════════════════════════════════════════════════════ */
+:root {
+  /* L1 · Families */
+  --f-sans:  'Segoe UI', system-ui, -apple-system, sans-serif;
+  --f-serif: 'Georgia', 'Times New Roman', serif;
+  --f-mono:  'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  /* L1 · Size scale */
+  --f-2xs: 10px; --f-xs: 11px;  --f-sm: 12px;  --f-base: 13px;
+  --f-md:  14px; --f-lg: 16px;  --f-xl: 20px;  --f-2xl: 26px;
+  --f-3xl: 32px; --f-4xl: 40px;
+  /* L1 · Weights */
+  --fw-normal: 400; --fw-medium: 500; --fw-semi: 600;
+  --fw-bold:   700; --fw-xbold: 800;  --fw-black: 900;
+  /* L1 · Line heights */
+  --lh-tight: 1.2; --lh-snug: 1.4; --lh-normal: 1.6; --lh-relaxed: 1.75;
+}
+/* L2 · Semantic defaults — override in each template's :root block */
+:root {
+  --font-heading: var(--f-sans);
+  --font-body:    var(--f-sans);
+  --font-label:   var(--f-sans);
+  --font-code:    var(--f-mono);
+  --text-name:    var(--f-4xl);
+  --text-section: var(--f-lg);
+  --text-body-sz: var(--f-base);
+  --text-sm:      var(--f-sm);
+  --text-xs:      var(--f-xs);
+  --text-2xs:     var(--f-2xs);
+}
+
+/* ===== Template 06: Dark Professional (Charcoal + Cyan) ===== */
+/* L2 Override · Dark Pro uses monospace for full tech aesthetic */
+:root {
+  --font-heading: var(--f-mono);
+  --font-body:    var(--f-mono);
+  --font-label:   var(--f-mono);
+  --bg-deep: #0a0f1e;
+  --bg-dark: #111827;
+  --bg-mid: #1f2937;
+  --bg-card: #1a2233;
+  --accent: #00d4c8;
+  --accent2: #818cf8;
+  --accent-dim: rgba(0,212,200,0.15);
+  --text-bright: #f0f6fc;
+  --text-mid: #94a3b8;
+  --text-dim: #4b5563;
+  --border: rgba(255,255,255,0.07);
+  --border-accent: rgba(0,212,200,0.25);
+  --glow: 0 0 20px rgba(0,212,200,0.15);
+  --radius: 10px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; }
+body { font-family: var(--font-body); background: var(--bg-deep); color: var(--text-bright); line-height: var(--lh-normal); }
+h1, h2, h3, h4, h5 { font-family: var(--font-heading); }
+
+.resume {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  min-height: 100vh;
+  max-width: 1380px;
+  min-width: 960px;
+  margin: 0 auto;
+}
+
+/* ── DARK SIDEBAR ── */
+.dark-sidebar {
+  background: var(--bg-dark);
+  border-right: 1px solid var(--border);
+  padding: 36px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Avatar */
+.d-avatar-wrap { text-align: center; margin-bottom: 28px; }
+.d-avatar {
+  width: 96px; height: 96px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent) 0%, #0891b2 100%);
+  margin: 0 auto 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 38px; font-weight: 800; color: var(--bg-deep);
+  box-shadow: var(--glow), 0 0 0 3px var(--accent-dim);
+}
+.d-name { font-size: 18px; font-weight: 700; color: var(--text-bright); margin-bottom: 4px; font-family: 'Segoe UI', system-ui, sans-serif; }
+.d-title { font-size: 10px; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px; }
+.d-tagline { font-size: 11.5px; color: var(--text-mid); line-height: 1.6; font-family: 'Segoe UI', system-ui, sans-serif; }
+
+.d-divider { height: 1px; background: var(--border); margin: 20px 0; }
+.d-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent); margin-bottom: 12px; }
+
+/* Contact */
+.d-contact-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.d-contact-list li { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--text-mid); font-family: 'Segoe UI', system-ui, sans-serif; }
+.d-contact-list a { color: var(--accent); text-decoration: none; }
+
+/* Skill blocks */
+.d-skill-block { margin-bottom: 16px; }
+.d-skill-cat { font-size: 10px; color: var(--text-dim); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 7px; font-family: 'Segoe UI', system-ui, sans-serif; }
+.d-skill-list { display: flex; flex-wrap: wrap; gap: 5px; }
+.d-tag {
+  background: rgba(0,212,200,0.08);
+  border: 1px solid rgba(0,212,200,0.2);
+  color: var(--text-mid);
+  padding: 3px 8px; border-radius: 4px;
+  font-size: 11px;
+  transition: all 0.2s; cursor: default;
+}
+.d-tag:hover { background: rgba(0,212,200,0.2); color: var(--accent); border-color: var(--accent); }
+
+/* Education */
+.d-edu-item { margin-bottom: 12px; font-family: 'Segoe UI', system-ui, sans-serif; }
+.d-edu-school { font-size: 12.5px; font-weight: 700; color: var(--text-bright); }
+.d-edu-deg { font-size: 11.5px; color: var(--text-mid); }
+.d-edu-yr { font-size: 10.5px; color: var(--text-dim); }
+
+/* ── DARK MAIN ── */
+.dark-main { background: var(--bg-mid); padding: 36px 28px 48px; }
+
+.dm-section { margin-bottom: 36px; }
+.dm-heading {
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--accent);
+  margin-bottom: 20px; padding-bottom: 8px; border-bottom: 1px solid var(--border-accent);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* About */
+.about-text { font-size: 14px; color: var(--text-mid); line-height: 1.8; font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg-card); border-radius: var(--radius); padding: 20px; border: 1px solid var(--border); border-left: 3px solid var(--accent); }
+
+/* Experience cards */
+.exp-dark { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px; margin-bottom: 14px; transition: all 0.25s; position: relative; overflow: hidden; }
+.exp-dark::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; background: var(--accent); transform: scaleY(0); transition: transform 0.25s; transform-origin: top; }
+.exp-dark:hover { border-color: var(--border-accent); box-shadow: var(--glow); }
+.exp-dark:hover::before { transform: scaleY(1); }
+.exp-dark:last-child { margin-bottom: 0; }
+.exp-dark-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px; }
+.exp-company-d { font-size: 15px; font-weight: 700; color: var(--text-bright); font-family: 'Segoe UI', system-ui, sans-serif; }
+.exp-role-d { font-size: 12px; color: var(--accent); font-weight: 600; font-family: 'Segoe UI', system-ui, sans-serif; }
+.exp-date-d { font-size: 10.5px; color: var(--text-dim); background: var(--bg-mid); border: 1px solid var(--border); padding: 2px 8px; border-radius: 4px; font-family: 'Segoe UI', system-ui, sans-serif; white-space: nowrap; }
+.exp-details { list-style: none; }
+.exp-details li { font-size: 12.5px; color: var(--text-mid); padding: 3px 0 3px 16px; position: relative; font-family: 'Segoe UI', system-ui, sans-serif; }
+.exp-details li::before { content: '>'; position: absolute; left: 0; color: var(--accent); font-size: 11px; font-weight: 700; }
+
+/* Certifications */
+.cert-dark { display: flex; align-items: center; gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--border); }
+.cert-dark:last-child { border-bottom: none; }
+.cert-led { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); box-shadow: var(--glow); flex-shrink: 0; }
+.cert-name-d { font-size: 13px; font-weight: 700; color: var(--text-bright); font-family: 'Segoe UI', system-ui, sans-serif; }
+.cert-meta-d { font-size: 11.5px; color: var(--text-mid); font-family: 'Segoe UI', system-ui, sans-serif; }
+
+/* ── BUTTONS ── */
+.back-btn { position: fixed; top: 20px; left: 20px; background: var(--bg-dark); color: var(--text-mid); border: 1px solid var(--border); padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s; z-index: 100; font-family: 'Segoe UI', system-ui, sans-serif; }
+.back-btn:hover { border-color: var(--accent); color: var(--accent); }
+.print-btn { position: fixed; bottom: 24px; right: 24px; background: var(--accent); color: var(--bg-deep); border: none; padding: 12px 20px; border-radius: 8px; font-size: 13px; font-weight: 700; cursor: pointer; display: flex; align-items: center; gap: 8px; box-shadow: var(--glow); transition: all 0.2s; z-index: 100; font-family: 'Segoe UI', system-ui, sans-serif; }
+.print-btn:hover { transform: translateY(-2px); }
+@media print { .back-btn, .print-btn { display: none; } body { background: white; color: black; } }

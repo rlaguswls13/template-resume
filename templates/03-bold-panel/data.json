@@ -1,0 +1,60 @@
+{
+  "profile": {
+    "name": "박준혁",
+    "jobTitle": "Senior Backend Engineer",
+    "tagline": "확장 가능한 시스템을 설계하고, 팀이 빠르게 달릴 수 있는 기반을 만듭니다."
+  },
+  "contact": [
+    { "icon": "📱", "value": "010-5577-2839" },
+    { "icon": "📧", "value": "junhyuk.park@backend.dev", "href": "mailto:junhyuk.park@backend.dev" },
+    { "icon": "🔗", "value": "GitHub", "href": "https://github.com", "target": "_blank" },
+    { "icon": "📍", "value": "Seongnam, Gyeonggi" },
+    { "icon": "✍️", "value": "Tech Blog", "href": "https://example.com", "target": "_blank" }
+  ],
+  "skills": [
+    { "category": "Language", "items": ["Java 17", "Kotlin", "Python", "SQL"] },
+    { "category": "Framework", "items": ["Spring Boot", "Spring WebFlux", "JPA / Hibernate", "QueryDSL"] },
+    { "category": "Database", "items": ["MySQL", "PostgreSQL", "Redis", "MongoDB"] },
+    { "category": "Infrastructure", "items": ["AWS (ECS, RDS, SQS)", "Docker", "Kubernetes", "Kafka"] },
+    { "category": "Testing", "items": ["JUnit 5", "Mockito", "TestContainers", "K6"] }
+  ],
+  "education": [
+    { "school": "서울대학교", "degree": "컴퓨터공학부 학사", "period": "2011.03 - 2015.02" }
+  ],
+  "summary": "Java/Kotlin 기반 대용량 트래픽 서버 개발 8년 경력. 피크 타임 TPS 5만을 안정적으로 처리하는 시스템을 설계했으며, 레거시 모놀리스를 마이크로서비스로 전환한 경험이 있습니다. 코드 품질과 테스트 문화에 진심인 엔지니어입니다.",
+  "experience": [
+    {
+      "company": "라인(LINE Plus)",
+      "position": "Server Development팀 / Senior Engineer",
+      "period": "2020.08 - 현재",
+      "responsibilities": [
+        "LINE 메시지 전송 서버 개선 (TPS 50,000 달성, p99 레이턴시 120ms → 38ms)",
+        "모놀리스 → 마이크로서비스 전환 주도 (6개월, 팀 4명)",
+        "사내 공통 라이브러리 유지보수 (Slack 플러그인, Circuit Breaker)"
+      ]
+    },
+    {
+      "company": "SK C&C",
+      "position": "Cloud Application팀 / 선임연구원",
+      "period": "2017.01 - 2020.07",
+      "responsibilities": [
+        "공공기관 전자정부 시스템 백엔드 개발·유지보수",
+        "Spring Boot 3.x 마이그레이션 및 성능 튜닝",
+        "REST API 설계 가이드라인 수립 및 팀 내 전파"
+      ]
+    },
+    {
+      "company": "NHN",
+      "position": "Platform팀 / Junior Developer",
+      "period": "2015.03 - 2016.12",
+      "responsibilities": [
+        "게임 플랫폼 결제 모듈 개발",
+        "배치 처리 시스템 구축 (Spring Batch)"
+      ]
+    }
+  ],
+  "certifications": [
+    { "title": "AWS Solutions Architect – Professional", "date": "2023.02", "issuer": "Amazon Web Services" },
+    { "title": "Certified Kubernetes Application Developer (CKAD)", "date": "2022.06", "issuer": "CNCF" }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "profile": {
+    "name": "이서연",
+    "jobTitle": "Lead UX Designer",
+    "tagline": "사용자의 문제를 발굴하고, 데이터로 검증하고, 디자인으로 해결합니다."
+  },
+  "contact": [
+    { "icon": "📧", "value": "seoyeon.lee@uxcraft.io", "href": "mailto:seoyeon.lee@uxcraft.io" },
+    { "icon": "📍", "value": "Seoul, Korea" },
+    { "icon": "🔗", "value": "portfolio.uxcraft.io", "href": "https://example.com", "target": "_blank" },
+    { "icon": "💼", "value": "linkedin.com/in/seoyeon", "href": "https://linkedin.com", "target": "_blank" }
+  ],
+  "stats": [
+    { "value": "7년+", "label": "디자인 경력" },
+    { "value": "40+", "label": "프로젝트" },
+    { "value": "3배", "label": "평균 전환율 향상" },
+    { "value": "NPS 82", "label": "최고 사용자 만족도" }
+  ],
+  "summary": "사용자 경험 설계부터 프로토타이핑, 사용성 테스트까지 UX 전 주기를 주도한 경험이 있습니다. 카카오, 라인에서 수백만 사용자가 사용하는 프로덕트를 설계했으며, 비즈니스 지표를 개선하는 디자인 결정에 강점이 있습니다.",
+  "skills": {
+    "디자인 툴": ["Figma", "Sketch", "Adobe XD", "Principle"],
+    "리서치": ["사용성 테스트", "인터뷰", "서베이", "히트맵 분석"],
+    "프로토타이핑": ["ProtoPie", "Framer", "InVision"],
+    "협업": ["Jira", "Notion", "Zeplin", "Storybook"]
+  },
+  "experience": [
+    {
+      "company": "카카오",
+      "position": "Product Design팀 / Lead UX Designer",
+      "period": "2021.06 - 현재",
+      "responsibilities": [
+        "카카오톡 오픈채팅 UX 개선: DAU 35% 증가",
+        "디자인 시스템 'Kakao UI Kit' 구축 및 팀 전파",
+        "UX 리서치 프로세스 표준화 및 리서처 2명 육성"
+      ]
+    },
+    {
+      "company": "라인(LINE)",
+      "position": "UX Design Center / Senior UX Designer",
+      "period": "2018.03 - 2021.05",
+      "responsibilities": [
+        "LINE Pay 결제 플로우 재설계: 전환율 42% 향상",
+        "글로벌 사용성 테스트 기획·운영 (한·일·태국)",
+        "신규 서비스 0→1 기획 참여 (LINE Shopping)"
+      ]
+    },
+    {
+      "company": "원티드랩",
+      "position": "Product Designer",
+      "period": "2016.07 - 2018.02",
+      "responsibilities": [
+        "채용 플랫폼 핵심 플로우 UX 설계",
+        "A/B 테스트 기반 온보딩 최적화 (이탈률 28% 감소)"
+      ]
+    }
+  ],
+  "education": [
+    { "school": "홍익대학교", "degree": "시각디자인학과 학사", "period": "2012.03 - 2016.02" }
+  ],
+  "certifications": [
+    { "title": "Google UX Design Certificate", "date": "2022.03", "issuer": "Google / Coursera" },
+    { "title": "Certified Usability Analyst (CUA)", "date": "2020.09", "issuer": "Human Factors International" }
+  ]
+}

@@ -1,0 +1,178 @@
+/* ══ Font System ══════════════════════════════════════════════════════
+   Layer 1 — Primitive Tokens  (raw values; do not use in components)
+   Layer 2 — Semantic Tokens   (use var(--font-*) in component styles)
+══════════════════════════════════════════════════════════════════════ */
+:root {
+  /* L1 · Families */
+  --f-sans:  'Segoe UI', system-ui, -apple-system, sans-serif;
+  --f-serif: 'Georgia', 'Times New Roman', serif;
+  --f-mono:  'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  /* L1 · Size scale */
+  --f-2xs: 10px; --f-xs: 11px;  --f-sm: 12px;  --f-base: 13px;
+  --f-md:  14px; --f-lg: 16px;  --f-xl: 20px;  --f-2xl: 26px;
+  --f-3xl: 32px; --f-4xl: 40px;
+  /* L1 · Weights */
+  --fw-normal: 400; --fw-medium: 500; --fw-semi: 600;
+  --fw-bold:   700; --fw-xbold: 800;  --fw-black: 900;
+  /* L1 · Line heights */
+  --lh-tight: 1.2; --lh-snug: 1.4; --lh-normal: 1.6; --lh-relaxed: 1.75;
+}
+/* L2 · Semantic defaults — override in each template's :root block */
+:root {
+  --font-heading: var(--f-sans);
+  --font-body:    var(--f-sans);
+  --font-label:   var(--f-sans);
+  --font-code:    var(--f-mono);
+  --text-name:    var(--f-4xl);
+  --text-section: var(--f-lg);
+  --text-body-sz: var(--f-base);
+  --text-sm:      var(--f-sm);
+  --text-xs:      var(--f-xs);
+  --text-2xs:     var(--f-2xs);
+}
+
+/* ===== Template 07: Magazine Grid (Warm Orange) ===== */
+:root {
+  --accent: #ea580c;
+  --accent2: #f97316;
+  --accent-bg: rgba(234,88,12,0.08);
+  --accent-border: rgba(234,88,12,0.2);
+  --bg: #fff8f4;
+  --card-bg: #ffffff;
+  --text-dark: #1c0a00;
+  --text-mid: #44260a;
+  --text-light: #9a7060;
+  --border: #f0e0d6;
+  --shadow: 0 2px 16px rgba(234,88,12,0.08);
+  --radius: 12px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text-dark); line-height: var(--lh-normal); }
+h1, h2, h3, h4, h5 { font-family: var(--font-heading); }
+
+.resume {
+  max-width: 1380px; min-width: 960px;
+  margin: 0 auto; padding: 24px 8px 60px;
+  display: grid;
+  grid-template-columns: 260px 1fr 240px;
+  grid-template-rows: auto auto auto;
+  gap: 16px;
+}
+
+/* ── BLOCKS ── */
+/* 1. Photo block */
+.mag-photo {
+  grid-column: 1; grid-row: 1 / 3;
+  background: linear-gradient(160deg, var(--accent) 0%, #c2410c 100%);
+  border-radius: var(--radius);
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 40px 20px; gap: 16px;
+  box-shadow: var(--shadow);
+  min-height: 380px;
+}
+.mag-avatar {
+  width: 120px; height: 120px; border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: 4px solid rgba(255,255,255,0.5);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 48px; font-weight: 800; color: #fff;
+  margin-bottom: 4px;
+}
+.mag-avatar-name { font-size: 20px; font-weight: 800; color: #fff; text-align: center; margin-bottom: 4px; }
+.mag-avatar-title { font-size: 10px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 2px; text-align: center; }
+.mag-contact-list { list-style: none; width: 100%; margin-top: 8px; }
+.mag-contact-list li { font-size: 12px; color: rgba(255,255,255,0.75); padding: 5px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 8px; }
+.mag-contact-list li:last-child { border-bottom: none; }
+.mag-contact-list a { color: rgba(255,255,255,0.9); text-decoration: none; }
+
+/* 2. Intro block */
+.mag-intro {
+  grid-column: 2; grid-row: 1;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 32px 32px;
+  box-shadow: var(--shadow);
+}
+.mag-name-big { font-size: 40px; font-weight: 900; color: var(--text-dark); letter-spacing: -1.5px; line-height: 1; margin-bottom: 8px; }
+.mag-title-big { font-size: 13px; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+.mag-tagline-text { font-size: 14.5px; color: var(--text-mid); line-height: 1.75; border-left: 3px solid var(--accent); padding-left: 16px; }
+
+/* 3. Right info block */
+.mag-right-info {
+  grid-column: 3; grid-row: 1 / 3;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  box-shadow: var(--shadow);
+  display: flex; flex-direction: column; gap: 0;
+}
+.mag-section-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 12px; margin-top: 20px; }
+.mag-section-label:first-child { margin-top: 0; }
+
+.edu-mag { margin-bottom: 12px; }
+.edu-mag:last-child { margin-bottom: 0; }
+.edu-school-mag { font-size: 13px; font-weight: 700; color: var(--text-dark); }
+.edu-degree-mag { font-size: 12px; color: var(--text-mid); }
+.edu-yr-mag { font-size: 11px; color: var(--text-light); }
+.cert-mag { font-size: 12.5px; color: var(--text-mid); padding: 5px 0; border-bottom: 1px solid var(--border); }
+.cert-mag:last-child { border-bottom: none; }
+.cert-mag strong { color: var(--text-dark); display: block; }
+
+/* 4. Skills tag cloud */
+.mag-skills {
+  grid-column: 2; grid-row: 2;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  box-shadow: var(--shadow);
+}
+.mag-tag-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+.mag-tag {
+  background: var(--accent-bg);
+  border: 1px solid var(--accent-border);
+  color: var(--accent);
+  padding: 5px 14px; border-radius: 100px;
+  font-size: 13px; font-weight: 600;
+  transition: all 0.2s; cursor: default;
+}
+.mag-tag:hover { background: var(--accent); color: #fff; }
+
+/* 5. Experience */
+.mag-exp {
+  grid-column: 1 / 3; grid-row: 3;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  box-shadow: var(--shadow);
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+}
+.mag-exp-section-label { grid-column: 1 / -1; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: -8px; }
+.exp-mag-card { border-left: 3px solid var(--accent-border); padding-left: 16px; }
+.exp-mag-co { font-size: 14px; font-weight: 800; color: var(--text-dark); margin-bottom: 2px; }
+.exp-mag-role { font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 2px; }
+.exp-mag-period { font-size: 11px; color: var(--text-light); margin-bottom: 8px; }
+.exp-mag-summary { font-size: 12px; color: var(--text-mid); margin-bottom: 8px; font-style: italic; }
+.exp-mag-items { list-style: none; }
+.exp-mag-items li { font-size: 12px; color: var(--text-mid); padding: 2px 0 2px 12px; position: relative; }
+.exp-mag-items li::before { content: '·'; position: absolute; left: 2px; color: var(--accent); font-weight: 700; }
+
+/* 6. Bottom right */
+.mag-bottom-right {
+  grid-column: 3; grid-row: 3;
+  background: linear-gradient(135deg, var(--accent) 0%, #c2410c 100%);
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  box-shadow: var(--shadow);
+  color: #fff;
+  display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;
+}
+.mag-quote { font-size: 22px; line-height: 1.4; font-weight: 800; color: #fff; margin-bottom: 12px; }
+.mag-quote-sub { font-size: 12px; color: rgba(255,255,255,0.65); }
+
+/* ── BUTTONS ── */
+.back-btn { position: fixed; top: 20px; left: 20px; background: var(--text-dark); color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s; z-index: 100; }
+.back-btn:hover { background: var(--accent); }
+.print-btn { position: fixed; bottom: 24px; right: 24px; background: var(--accent); color: #fff; border: none; padding: 12px 20px; border-radius: 10px; font-size: 13px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 20px rgba(234,88,12,0.35); transition: all 0.2s; z-index: 100; }
+.print-btn:hover { transform: translateY(-2px); }
+@media print { .back-btn, .print-btn { display: none; } body { background: white; } .resume { padding: 0; } }

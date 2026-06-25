@@ -1,0 +1,61 @@
+{
+  "profile": {
+    "name": "최민준",
+    "jobTitle": "Senior Data Scientist",
+    "image": ""
+  },
+  "contact": [
+    { "icon": "📱", "label": "전화", "value": "010-2341-8890", "href": "tel:010-2341-8890", "isLink": true },
+    { "icon": "📧", "label": "이메일", "value": "minjun.choi@datalab.kr", "href": "mailto:minjun.choi@datalab.kr", "isLink": true },
+    { "icon": "📍", "label": "위치", "value": "Seoul, Korea", "isLink": false },
+    { "icon": "🔗", "label": "GitHub", "value": "github.com/minjun-ds", "href": "https://github.com", "isLink": true, "target": "_blank" },
+    { "icon": "📊", "label": "Kaggle", "value": "kaggle.com/minjun", "href": "https://kaggle.com", "isLink": true, "target": "_blank" }
+  ],
+  "skills": {
+    "언어 & 라이브러리": ["Python", "R", "SQL", "Scala"],
+    "ML / DL 프레임워크": ["TensorFlow", "PyTorch", "scikit-learn", "XGBoost"],
+    "데이터 플랫폼": ["Apache Spark", "Airflow", "Kafka", "Hadoop"],
+    "시각화 & BI": ["Tableau", "Power BI", "Plotly", "Seaborn"]
+  },
+  "education": [
+    { "school": "KAIST", "degree": "컴퓨터공학 석사 (데이터마이닝)", "period": "2017.03 - 2019.02" },
+    { "school": "연세대학교", "degree": "통계학과 학사", "period": "2013.03 - 2017.02" }
+  ],
+  "introduction": {
+    "subtitle": "복잡한 데이터에서 비즈니스 인사이트를 추출하고, 예측 모델로 의사결정을 혁신하는 데이터 과학자",
+    "cards": [
+      { "number": "01", "title": "대규모 데이터 파이프라인 설계", "description": "일 10억 건 이상의 이벤트 로그를 처리하는 Spark 기반 파이프라인을 설계·운영하여 배치 처리 시간을 60% 단축했습니다." },
+      { "number": "02", "title": "예측 모델로 비즈니스 가치 창출", "description": "고객 이탈 예측 모델 도입 후 마케팅 비용 30% 절감, 고객 유지율을 15%p 향상시킨 실증 경험을 보유합니다." },
+      { "number": "03", "title": "MLOps로 모델 배포 자동화", "description": "학습부터 서빙까지 전 과정을 자동화한 MLOps 파이프라인을 구축하여 배포 주기를 2주에서 1일로 단축했습니다." },
+      { "number": "04", "title": "데이터 기반 조직 문화 리드", "description": "비개발 직군을 위한 데이터 리터러시 교육을 설계하고 BI 대시보드를 표준화하여 전사 데이터 자립도를 높였습니다." },
+      { "number": "05", "title": "최신 연구를 실무에 적용하는 속도", "description": "NeurIPS, ICML 탑티어 논문을 지속 모니터링하고, 최신 연구 성과를 프로덕션 환경에 빠르게 이식합니다." }
+    ]
+  },
+  "experience": [
+    {
+      "company": "삼성SDS",
+      "position": "Data Intelligence팀 / 수석연구원",
+      "period": "2022.03 - 현재",
+      "responsibilities": [
+        "제조 공정 이상 탐지 AI 모델 개발 및 현장 배포 (불량률 23% 감소)",
+        "데이터 플랫폼 아키텍처 설계 및 거버넌스 수립",
+        "주니어 데이터 사이언티스트 3명 멘토링"
+      ]
+    },
+    {
+      "company": "카카오",
+      "position": "Kakao AI팀 / 데이터 사이언티스트",
+      "period": "2019.03 - 2022.02",
+      "responsibilities": [
+        "카카오톡 추천 피드 개선: CTR 18% 향상",
+        "사용자 행동 분석 및 개인화 추천 모델 구축",
+        "A/B 테스트 플랫폼 설계 및 통계 검정 자동화"
+      ]
+    }
+  ],
+  "certifications": [
+    { "title": "AWS Certified Machine Learning – Specialty", "date": "2023.06", "description": "Amazon Web Services" },
+    { "title": "Google Professional Data Engineer", "date": "2022.11", "description": "Google Cloud Platform" },
+    { "title": "Kaggle Competitions Master", "date": "2021.09", "description": "Gold Medal 3회 · 상위 1% 랭킹", "details": ["추천시스템, 자연어처리, 시계열 예측 분야"] }
+  ]
+}

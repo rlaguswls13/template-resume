@@ -1,0 +1,55 @@
+{
+  "profile": {
+    "name": "송하늘",
+    "jobTitle": "Senior iOS Developer",
+    "tagline": "Swift로 섬세하고 빠른 네이티브 경험을 만드는 iOS 개발자"
+  },
+  "contact": [
+    { "icon": "📧", "value": "haneul.song@swiftdev.kr" },
+    { "icon": "🔗", "value": "github.com/haneul-ios", "href": "https://github.com", "target": "_blank" },
+    { "icon": "🌐", "value": "swiftdev.kr", "href": "https://example.com", "target": "_blank" },
+    { "icon": "📍", "value": "Seoul, Korea" }
+  ],
+  "skills": ["Swift", "SwiftUI", "UIKit", "Combine", "RxSwift", "Core Data", "XCTest", "Xcode", "CocoaPods", "SPM", "Instruments", "Fastlane"],
+  "experience": [
+    {
+      "company": "당근마켓",
+      "role": "iOS Developer",
+      "period": "2021.05 – 현재",
+      "summary": "중고거래 앱 iOS 클라이언트 개발·유지보수",
+      "items": [
+        "채팅 기능 SwiftUI 전환 (UIKit → SwiftUI, 크래시 45% 감소)",
+        "이미지 캐싱 레이어 직접 구현으로 메모리 사용량 30% 절감",
+        "A/B 테스트 SDK 자체 개발 및 팀 배포"
+      ]
+    },
+    {
+      "company": "쏘카(SOCAR)",
+      "role": "iOS Developer",
+      "period": "2019.08 – 2021.04",
+      "summary": "카셰어링 앱 iOS 개발",
+      "items": [
+        "지도 기반 차량 검색 UI 개선 (MapKit + Cluster)",
+        "결제 플로우 리팩토링 (전환율 22% 향상)",
+        "CI/CD Fastlane + GitHub Actions 구축"
+      ]
+    },
+    {
+      "company": "스타트업 O2O",
+      "role": "Junior iOS Developer",
+      "period": "2018.02 – 2019.07",
+      "summary": "배달 O2O 앱 MVP 개발",
+      "items": [
+        "UIKit 기반 앱 0→1 개발·런칭",
+        "RESTful API 연동 및 오프라인 모드 구현"
+      ]
+    }
+  ],
+  "education": [
+    { "school": "고려대학교", "degree": "소프트웨어학부 학사", "period": "2014 – 2018" }
+  ],
+  "certifications": [
+    { "name": "Apple Developer Program 정회원", "year": "2019 – 현재" },
+    { "name": "정보처리기사", "year": "2018" }
+  ]
+}

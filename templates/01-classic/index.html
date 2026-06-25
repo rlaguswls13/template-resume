@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>최민준 — Senior Data Scientist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 왼쪽 사이드바 -->
+    <aside class="sidebar">
+      <section class="profile" id="profile"></section>
+      <section class="contact" id="contact"></section>
+      <section class="skills" id="skills"></section>
+      <section class="education" id="education"></section>
+    </aside>
+    <!-- 가운데: 자기소개 -->
+    <section class="introduction">
+      <h2>자기소개</h2>
+      <p class="intro-subtitle" id="introSubtitle"></p>
+      <div class="cards-grid" id="cardsGrid"></div>
+    </section>
+    <!-- 우측: 경력 + 자격증 -->
+    <aside class="right-content">
+      <section class="experience" id="experience"></section>
+      <section class="certifications" id="certifications"></section>
+    </aside>
+  </div>
+
+  <a class="back-btn" href="../../index.html">← 갤러리</a>
+  <button class="print-btn" onclick="window.print()">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+    PDF 저장
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{
+  "profile": {
+    "name": "정유진",
+    "jobTitle": "Frontend Developer",
+    "location": "Seoul, Korea",
+    "email": "yujin.jeong@frontend.dev",
+    "phone": "010-8832-4415",
+    "github": "github.com/yujin-dev",
+    "blog": "yujin.dev"
+  },
+  "summary": "React·TypeScript 기반 프론트엔드 개발 5년 경력. 웹 성능 최적화와 접근성(a11y)에 진심이며, 디자인 시스템 구축 경험이 있습니다. 사용자가 체감하는 속도와 완성도를 가장 중요하게 생각합니다.",
+  "experience": [
+    {
+      "company": "쿠팡",
+      "role": "Frontend Engineer",
+      "period": "2022.03 – 현재",
+      "items": [
+        "상품 상세 페이지 Core Web Vitals 개선 (LCP 4.2s → 1.3s, CLS 0.32 → 0.04)",
+        "디자인 시스템 'Coupang UI' 컴포넌트 40+ 설계·문서화",
+        "Server Components 도입으로 번들 사이즈 35% 절감"
+      ]
+    },
+    {
+      "company": "원티드랩",
+      "role": "Frontend Developer",
+      "period": "2020.08 – 2022.02",
+      "items": [
+        "채용 지원 플로우 SPA 개발 (Vue 3 + TypeScript)",
+        "Storybook 기반 UI 문서화 체계 구축",
+        "Lighthouse 점수 57 → 93 개선"
+      ]
+    },
+    {
+      "company": "NHN Commerce",
+      "role": "Junior Developer",
+      "period": "2019.07 – 2020.07",
+      "items": [
+        "이커머스 어드민 페이지 React 마이그레이션",
+        "RESTful API 연동 및 상태관리 (Redux)"
+      ]
+    }
+  ],
+  "skills": {
+    "Core": ["TypeScript", "JavaScript (ES2024)", "HTML5", "CSS3"],
+    "Framework": ["React 18", "Next.js 14", "Vue 3", "Svelte"],
+    "Tooling": ["Webpack", "Vite", "Turbopack", "ESLint", "Prettier"],
+    "Testing": ["Vitest", "Testing Library", "Playwright", "Storybook"],
+    "Etc": ["GraphQL", "REST API", "Figma", "Git"]
+  },
+  "education": [
+    { "school": "서강대학교", "major": "컴퓨터공학과 학사", "period": "2015 – 2019" }
+  ],
+  "certifications": [
+    { "name": "정보처리기사", "issuer": "한국산업인력공단", "year": "2019" }
+  ]
+}

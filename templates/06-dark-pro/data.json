@@ -1,0 +1,59 @@
+{
+  "profile": {
+    "name": "황지민",
+    "jobTitle": "Senior DevOps / SRE Engineer",
+    "tagline": "안정적이고 자동화된 인프라로 개발팀이 더 빠르게 배포할 수 있도록 합니다."
+  },
+  "contact": [
+    { "icon": "📧", "value": "jimin.hwang@infra.io", "href": "mailto:jimin.hwang@infra.io" },
+    { "icon": "🔗", "value": "GitHub", "href": "https://github.com", "target": "_blank" },
+    { "icon": "📍", "value": "Pangyo, Gyeonggi" },
+    { "icon": "✍️", "value": "Tech Blog", "href": "https://example.com", "target": "_blank" }
+  ],
+  "skills": [
+    { "cat": "Container & Orchestration", "items": ["Kubernetes", "Docker", "Helm", "Istio"] },
+    { "cat": "IaC & CI/CD", "items": ["Terraform", "ArgoCD", "GitHub Actions", "Jenkins"] },
+    { "cat": "Cloud", "items": ["AWS (EKS, EC2, S3)", "GCP", "Azure"] },
+    { "cat": "Monitoring", "items": ["Prometheus", "Grafana", "Loki", "Datadog"] },
+    { "cat": "Language", "items": ["Python", "Go", "Bash", "YAML"] }
+  ],
+  "experience": [
+    {
+      "company": "네이버",
+      "role": "SRE팀 / Senior Engineer",
+      "period": "2021.04 – 현재",
+      "details": [
+        "검색 서비스 인프라 안정성 99.999% 유지 (멀티 리전 HA 구성)",
+        "Kubernetes 클러스터 운영 규모 확장 (노드 200 → 1,200대)",
+        "GitOps 기반 배포 파이프라인 구축으로 배포 빈도 5배 향상"
+      ]
+    },
+    {
+      "company": "카카오엔터프라이즈",
+      "role": "Cloud Infra팀 / DevOps Engineer",
+      "period": "2018.08 – 2021.03",
+      "details": [
+        "멀티 클라우드 환경(AWS + GCP) Terraform 모듈 표준화",
+        "Grafana 대시보드 300+ 구축, 이상 감지 알럿 자동화",
+        "DR(재해복구) 절차 구축 및 연 2회 훈련 주도"
+      ]
+    },
+    {
+      "company": "SK텔레콤",
+      "role": "인프라팀 / 사원",
+      "period": "2016.02 – 2018.07",
+      "details": [
+        "온프레미스 서버 유지보수 및 Linux 시스템 관리",
+        "모니터링 스크립트 자동화 (Python 배치)"
+      ]
+    }
+  ],
+  "certifications": [
+    { "name": "CKA (Certified Kubernetes Administrator)", "issuer": "CNCF", "date": "2022.11" },
+    { "name": "AWS Solutions Architect – Associate", "issuer": "Amazon", "date": "2021.06" },
+    { "name": "Google Associate Cloud Engineer", "issuer": "Google Cloud", "date": "2020.09" }
+  ],
+  "education": [
+    { "school": "포항공과대학교 (POSTECH)", "degree": "컴퓨터공학과 학사", "period": "2012 – 2016" }
+  ]
+}

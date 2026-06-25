@@ -1,0 +1,150 @@
+/* ══ Font System ══════════════════════════════════════════════════════
+   Layer 1 — Primitive Tokens  (raw values; do not use in components)
+   Layer 2 — Semantic Tokens   (use var(--font-*) in component styles)
+══════════════════════════════════════════════════════════════════════ */
+:root {
+  /* L1 · Families */
+  --f-sans:  'Segoe UI', system-ui, -apple-system, sans-serif;
+  --f-serif: 'Georgia', 'Times New Roman', serif;
+  --f-mono:  'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  /* L1 · Size scale */
+  --f-2xs: 10px; --f-xs: 11px;  --f-sm: 12px;  --f-base: 13px;
+  --f-md:  14px; --f-lg: 16px;  --f-xl: 20px;  --f-2xl: 26px;
+  --f-3xl: 32px; --f-4xl: 40px;
+  /* L1 · Weights */
+  --fw-normal: 400; --fw-medium: 500; --fw-semi: 600;
+  --fw-bold:   700; --fw-xbold: 800;  --fw-black: 900;
+  /* L1 · Line heights */
+  --lh-tight: 1.2; --lh-snug: 1.4; --lh-normal: 1.6; --lh-relaxed: 1.75;
+}
+/* L2 · Semantic defaults — override in each template's :root block */
+:root {
+  --font-heading: var(--f-sans);
+  --font-body:    var(--f-sans);
+  --font-label:   var(--f-sans);
+  --font-code:    var(--f-mono);
+  --text-name:    var(--f-4xl);
+  --text-section: var(--f-lg);
+  --text-body-sz: var(--f-base);
+  --text-sm:      var(--f-sm);
+  --text-xs:      var(--f-xs);
+  --text-2xs:     var(--f-2xs);
+}
+
+/* ===== Template 08: Card Grid (Professional Blue) ===== */
+:root {
+  --accent: #1e40af;
+  --accent-light: #3b82f6;
+  --accent-bg: rgba(30,64,175,0.07);
+  --accent-border: rgba(30,64,175,0.18);
+  --bg: #f0f4ff;
+  --card-bg: #ffffff;
+  --text-dark: #0f172a;
+  --text-mid: #334155;
+  --text-light: #64748b;
+  --border: #e2e8f0;
+  --shadow: 0 2px 16px rgba(30,64,175,0.08);
+  --radius: 14px;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text-dark); line-height: var(--lh-normal); }
+h1, h2, h3, h4, h5 { font-family: var(--font-heading); }
+
+.resume { max-width: 1380px; min-width: 960px; margin: 0 auto; padding: 24px 8px 60px; }
+
+/* ── TOP HEADER BAR ── */
+.top-header {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  box-shadow: var(--shadow);
+  border-top: 4px solid var(--accent);
+}
+.th-avatar {
+  width: 72px; height: 72px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 28px; font-weight: 800; color: #fff;
+  flex-shrink: 0;
+}
+.th-info { flex: 1; }
+.th-name { font-size: 26px; font-weight: 800; color: var(--text-dark); letter-spacing: -0.5px; margin-bottom: 2px; }
+.th-title { font-size: 12px; color: var(--accent-light); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+.th-contacts { display: flex; gap: 8px; flex-wrap: wrap; }
+.th-contact-chip { display: inline-flex; align-items: center; gap: 6px; background: var(--accent-bg); border: 1px solid var(--accent-border); color: var(--text-mid); padding: 5px 12px; border-radius: 8px; font-size: 12px; text-decoration: none; transition: all 0.2s; }
+.th-contact-chip:hover { background: var(--accent); color: #fff; border-color: var(--accent); }
+.th-contact-chip span { font-size: 14px; }
+
+/* ── CARD GRID ── */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 16px;
+}
+.g-card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 24px 26px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: all 0.25s;
+}
+.g-card:hover { border-color: var(--accent-border); box-shadow: 0 6px 24px rgba(30,64,175,0.12); }
+
+/* Span classes */
+.span-2 { grid-column: span 2; }
+.span-3 { grid-column: span 3; }
+
+/* Card label */
+.card-label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent-light); margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+.card-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* About card */
+.about-text { font-size: 13.5px; color: var(--text-mid); line-height: 1.8; }
+
+/* Skills card */
+.skill-blocks { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.skill-block-item { }
+.sk-cat { font-size: 11px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+.sk-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+.sk-tag { background: var(--accent-bg); border: 1px solid var(--accent-border); color: var(--accent); padding: 3px 9px; border-radius: 6px; font-size: 11.5px; font-weight: 600; transition: all 0.2s; cursor: default; }
+.sk-tag:hover { background: var(--accent); color: #fff; }
+
+/* Experience card */
+.exp-list {}
+.exp-g-item { margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border); }
+.exp-g-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.exp-g-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 4px; }
+.exp-g-co { font-size: 14px; font-weight: 700; color: var(--text-dark); }
+.exp-g-role { font-size: 12px; color: var(--accent-light); font-weight: 600; margin-bottom: 2px; }
+.exp-g-period { font-size: 11px; color: var(--text-light); background: var(--bg); border: 1px solid var(--border); padding: 2px 8px; border-radius: 6px; white-space: nowrap; }
+.exp-g-items { list-style: none; margin-top: 8px; }
+.exp-g-items li { font-size: 12.5px; color: var(--text-mid); padding: 2px 0 2px 14px; position: relative; }
+.exp-g-items li::before { content: '▸'; position: absolute; left: 0; color: var(--accent-light); font-size: 10px; top: 4px; }
+
+/* Education card */
+.edu-g-item { margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+.edu-g-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.edu-g-school { font-size: 14px; font-weight: 700; color: var(--text-dark); }
+.edu-g-major { font-size: 12.5px; color: var(--text-mid); }
+.edu-g-period { font-size: 11px; color: var(--text-light); }
+
+/* Certifications card */
+.cert-g-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cert-g-item { background: var(--accent-bg); border: 1px solid var(--accent-border); border-radius: 10px; padding: 14px 16px; }
+.cert-g-name { font-size: 12.5px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; line-height: 1.3; }
+.cert-g-meta { font-size: 11px; color: var(--accent-light); font-weight: 600; }
+.cert-g-date { font-size: 11px; color: var(--text-light); }
+
+/* ── BUTTONS ── */
+.back-btn { position: fixed; top: 20px; left: 20px; background: var(--accent); color: #fff; padding: 8px 16px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s; z-index: 100; }
+.back-btn:hover { background: var(--accent-light); }
+.print-btn { position: fixed; bottom: 24px; right: 24px; background: var(--accent); color: #fff; border: none; padding: 12px 20px; border-radius: 10px; font-size: 13px; font-weight: 700; cursor: pointer; box-shadow: 0 4px 20px rgba(30,64,175,0.3); transition: all 0.2s; z-index: 100; }
+.print-btn:hover { transform: translateY(-2px); }
+@media print { .back-btn, .print-btn { display: none; } body { background: white; } .resume { padding: 0; } }

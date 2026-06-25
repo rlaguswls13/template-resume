@@ -1,0 +1,104 @@
+/* ══ Font System ══════════════════════════════════════════════════════
+   Layer 1 — Primitive Tokens  (raw values; do not use in components)
+   Layer 2 — Semantic Tokens   (use var(--font-*) in component styles)
+══════════════════════════════════════════════════════════════════════ */
+:root {
+  /* L1 · Families */
+  --f-sans:  'Segoe UI', system-ui, -apple-system, sans-serif;
+  --f-serif: 'Georgia', 'Times New Roman', serif;
+  --f-mono:  'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+  /* L1 · Size scale */
+  --f-2xs: 10px; --f-xs: 11px;  --f-sm: 12px;  --f-base: 13px;
+  --f-md:  14px; --f-lg: 16px;  --f-xl: 20px;  --f-2xl: 26px;
+  --f-3xl: 32px; --f-4xl: 40px;
+  /* L1 · Weights */
+  --fw-normal: 400; --fw-medium: 500; --fw-semi: 600;
+  --fw-bold:   700; --fw-xbold: 800;  --fw-black: 900;
+  /* L1 · Line heights */
+  --lh-tight: 1.2; --lh-snug: 1.4; --lh-normal: 1.6; --lh-relaxed: 1.75;
+}
+/* L2 · Semantic defaults — override in each template's :root block */
+:root {
+  --font-heading: var(--f-sans);
+  --font-body:    var(--f-sans);
+  --font-label:   var(--f-sans);
+  --font-code:    var(--f-mono);
+  --text-name:    var(--f-4xl);
+  --text-section: var(--f-lg);
+  --text-body-sz: var(--f-base);
+  --text-sm:      var(--f-sm);
+  --text-xs:      var(--f-xs);
+  --text-2xs:     var(--f-2xs);
+}
+
+/* ===== Template 05: Minimalist (B&W + Blue Accent) ===== */
+/* L2 Override · Minimalist uses elegant serif for body text */
+:root {
+  --font-body: var(--f-serif);
+  --accent: #2563eb;
+  --text-dark: #111827;
+  --text-mid: #374151;
+  --text-light: #6b7280;
+  --text-xlight: #9ca3af;
+  --bg: #ffffff;
+  --divider: #e5e7eb;
+  --divider-dark: #d1d5db;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); background: var(--bg); color: var(--text-dark); line-height: 1.7; }
+h1, h2, h3, h4, h5 { font-family: var(--font-heading); }
+
+.resume { max-width: 860px; min-width: 700px; margin: 0 auto; padding: 48px 40px 60px; }
+
+/* NAME ROW */
+.name-row { display: flex; justify-content: space-between; align-items: flex-end; padding-bottom: 20px; border-bottom: 2.5px solid var(--text-dark); margin-bottom: 28px; }
+.name-block {}
+.r-name { font-size: 38px; font-weight: 700; color: var(--text-dark); letter-spacing: -1px; line-height: 1; margin-bottom: 4px; font-family: 'Segoe UI', system-ui, sans-serif; }
+.r-title { font-size: 14px; color: var(--accent); font-weight: 600; letter-spacing: 2px; text-transform: uppercase; font-family: 'Segoe UI', system-ui, sans-serif; }
+.contact-block { text-align: right; display: flex; flex-direction: column; gap: 3px; }
+.contact-item { font-size: 12.5px; color: var(--text-light); font-family: 'Segoe UI', system-ui, sans-serif; }
+.contact-item a { color: var(--accent); text-decoration: none; }
+
+/* SUMMARY */
+.summary-section { margin-bottom: 32px; }
+.summary-text { font-size: 14.5px; color: var(--text-mid); line-height: 1.8; border-left: 3px solid var(--accent); padding-left: 16px; }
+
+/* SECTIONS */
+.section { margin-bottom: 30px; }
+.section-hr { display: flex; align-items: center; gap: 12px; margin-bottom: 20px; }
+.section-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--text-dark); font-family: 'Segoe UI', system-ui, sans-serif; white-space: nowrap; }
+.section-line { flex: 1; height: 1px; background: var(--divider-dark); }
+
+/* Experience */
+.exp-entry { display: grid; grid-template-columns: 160px 1fr; gap: 16px; margin-bottom: 22px; }
+.exp-entry:last-child { margin-bottom: 0; }
+.exp-meta { text-align: right; padding-top: 2px; }
+.exp-co { font-size: 13.5px; font-weight: 700; color: var(--text-dark); font-family: 'Segoe UI', system-ui, sans-serif; }
+.exp-period { font-size: 11.5px; color: var(--text-xlight); font-family: 'Segoe UI', system-ui, sans-serif; }
+.exp-role { font-size: 13px; font-weight: 700; color: var(--accent); margin-bottom: 6px; font-family: 'Segoe UI', system-ui, sans-serif; }
+.exp-items { list-style: none; }
+.exp-items li { font-size: 13.5px; color: var(--text-mid); padding: 2px 0 2px 14px; position: relative; }
+.exp-items li::before { content: '—'; position: absolute; left: 0; color: var(--text-xlight); }
+
+/* Skills (inline) */
+.skill-inline { margin-bottom: 8px; display: flex; gap: 12px; align-items: baseline; font-family: 'Segoe UI', system-ui, sans-serif; }
+.skill-cat-name { font-size: 11.5px; font-weight: 700; color: var(--text-dark); text-transform: uppercase; letter-spacing: 1px; min-width: 80px; flex-shrink: 0; }
+.skill-values { font-size: 13.5px; color: var(--text-mid); }
+
+/* Education */
+.edu-entry { display: grid; grid-template-columns: 160px 1fr; gap: 16px; margin-bottom: 12px; font-family: 'Segoe UI', system-ui, sans-serif; }
+.edu-yr { font-size: 12px; color: var(--text-xlight); text-align: right; padding-top: 2px; }
+.edu-school-m { font-size: 13.5px; font-weight: 700; color: var(--text-dark); }
+.edu-maj { font-size: 13px; color: var(--text-mid); }
+
+/* Certifications */
+.cert-inline { font-size: 13.5px; color: var(--text-mid); font-family: 'Segoe UI', system-ui, sans-serif; margin-bottom: 6px; }
+.cert-inline span { font-weight: 700; color: var(--text-dark); }
+
+/* ── BUTTONS ── */
+.back-btn { position: fixed; top: 20px; left: 20px; background: var(--text-dark); color: #fff; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; text-decoration: none; transition: all 0.2s; z-index: 100; font-family: 'Segoe UI', system-ui, sans-serif; }
+.back-btn:hover { background: var(--accent); }
+.print-btn { position: fixed; bottom: 24px; right: 24px; background: var(--text-dark); color: #fff; border: none; padding: 10px 18px; border-radius: 6px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; z-index: 100; font-family: 'Segoe UI', system-ui, sans-serif; }
+.print-btn:hover { background: var(--accent); }
+@media print { .back-btn, .print-btn { display: none; } body { background: white; } .resume { padding: 40px 60px; } }

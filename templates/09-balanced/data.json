@@ -1,0 +1,59 @@
+{
+  "profile": {
+    "name": "임나영",
+    "jobTitle": "Machine Learning Engineer",
+    "location": "Seoul, Korea",
+    "email": "nayoung.lim@mlcraft.ai",
+    "github": "github.com/nayoung-ml"
+  },
+  "summary": "NLP·컴퓨터 비전 분야 ML 모델 연구·개발 6년. 연구 논문 구현부터 프로덕션 서빙까지 전 사이클 경험. PyTorch 기반 모델을 TensorRT로 최적화하여 추론 속도 4배 향상 사례 보유. MLOps 자동화에 강점이 있습니다.",
+  "experience": [
+    {
+      "company": "카카오브레인",
+      "role": "ML Research Engineer",
+      "period": "2022.01 – 현재",
+      "items": [
+        "초거대 언어모델(LLM) 파인튜닝 파이프라인 구축 (LoRA, RLHF)",
+        "다국어 문서 분류 모델 서빙 (QPS 10,000, p99 28ms)",
+        "Feature Store 설계 및 팀 공통 ML 플랫폼 기여"
+      ]
+    },
+    {
+      "company": "엔씨소프트 NLP센터",
+      "role": "ML Engineer",
+      "period": "2019.08 – 2021.12",
+      "items": [
+        "게임 내 대화 NPC 자연어 처리 모델 개발",
+        "감성 분석·욕설 탐지 분류기 (F1 0.94 달성)",
+        "데이터 레이블링 파이프라인 자동화 (처리량 5배 향상)"
+      ]
+    },
+    {
+      "company": "AI 스타트업",
+      "role": "Junior ML Engineer",
+      "period": "2018.03 – 2019.07",
+      "items": [
+        "OCR 모델 학습 데이터 구축 및 파이프라인 개발",
+        "객체 탐지(YOLOv3) 모델 학습 및 최적화"
+      ]
+    }
+  ],
+  "skills": [
+    { "name": "Python", "pct": 95 },
+    { "name": "PyTorch", "pct": 92 },
+    { "name": "TensorFlow", "pct": 75 },
+    { "name": "NLP / LLM", "pct": 90 },
+    { "name": "Computer Vision", "pct": 80 },
+    { "name": "MLOps (Kubeflow)", "pct": 72 },
+    { "name": "SQL / BigQuery", "pct": 78 },
+    { "name": "AWS SageMaker", "pct": 68 }
+  ],
+  "education": [
+    { "school": "POSTECH", "major": "컴퓨터공학 석사 (NLP Lab)", "period": "2016 – 2018" },
+    { "school": "한양대학교", "major": "컴퓨터공학과 학사", "period": "2012 – 2016" }
+  ],
+  "certifications": [
+    { "name": "AWS Certified Machine Learning – Specialty", "year": "2023", "org": "Amazon" },
+    { "name": "Google TensorFlow Developer Certificate", "year": "2021", "org": "Google" }
+  ]
+}

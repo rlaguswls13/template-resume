@@ -1,0 +1,68 @@
+{
+  "profile": {
+    "name": "변성호",
+    "jobTitle": "Cloud Architect & Director",
+    "location": "Seoul, Korea",
+    "email": "sungho.byun@cloudarch.kr",
+    "linkedin": "linkedin.com/in/sungho-byun"
+  },
+  "kpis": [
+    { "value": "15년+", "label": "IT 경력" },
+    { "value": "$50M+", "label": "클라우드 비용 절감 리드" },
+    { "value": "300+", "label": "인프라 설계 프로젝트" },
+    { "value": "3대 CSP", "label": "AWS · Azure · GCP" }
+  ],
+  "summary": "대기업 IT 시스템의 멀티 클라우드 전환을 15년간 주도한 Cloud Architect. CTO 직속 조직에서 연간 $50M 이상 클라우드 비용 절감 전략을 수립·실행했으며, 100여 명 규모 기술 조직 리드 경험이 있습니다. 비즈니스 목표와 기술 전략을 정렬하는 데 강점이 있습니다.",
+  "achievements": [
+    { "title": "멀티 클라우드 전략 수립", "desc": "AWS + Azure 이중화로 99.999% 가용성 및 벤더 의존도 분산 달성" },
+    { "title": "비용 최적화 리드", "desc": "Reserved Instance·Savings Plans 최적화로 연 $12M 절감" },
+    { "title": "기술 조직 리드", "desc": "클라우드 아키텍처 팀 12명 구성·운영, 주니어 25명 멘토링" }
+  ],
+  "experience": [
+    {
+      "company": "LG CNS",
+      "role": "Cloud Transformation Center / 수석 아키텍트",
+      "period": "2018.03 – 현재",
+      "items": [
+        "LG 계열사 30개사 클라우드 전환 아키텍처 총괄",
+        "Landing Zone 설계 (AWS Organizations + SCPs)",
+        "FinOps 체계 수립으로 클라우드 예산 집행 정확도 95% 달성"
+      ]
+    },
+    {
+      "company": "삼성SDS",
+      "role": "클라우드사업부 / 아키텍트 리드",
+      "period": "2012.06 – 2018.02",
+      "items": [
+        "삼성 글로벌 본사 ERP 클라우드 마이그레이션 PMO",
+        "하이브리드 클라우드 레퍼런스 아키텍처 수립",
+        "기술 블로그·사내 교육 체계 구축 (수강생 500+)"
+      ]
+    },
+    {
+      "company": "IBM Korea",
+      "role": "Technical Architect",
+      "period": "2008.07 – 2012.05",
+      "items": [
+        "금융·공공 분야 온프레미스 인프라 설계",
+        "SOA 기반 미들웨어 통합 아키텍처 설계"
+      ]
+    }
+  ],
+  "skills": {
+    "Cloud Platform": ["AWS (Expert)", "Azure (Advanced)", "GCP (Intermediate)"],
+    "Architecture": ["Well-Architected Framework", "TOGAF", "FinOps", "Landing Zone"],
+    "IaC & DevOps": ["Terraform", "Pulumi", "Ansible", "ArgoCD"],
+    "Security & Gov": ["CSPM", "Zero Trust", "IAM", "SOC2 / ISO27001"]
+  },
+  "education": [
+    { "school": "연세대학교", "major": "전산학과 박사 (분산시스템)", "period": "2004 – 2008" },
+    { "school": "연세대학교", "major": "컴퓨터과학과 학사", "period": "2000 – 2004" }
+  ],
+  "certifications": [
+    { "name": "AWS Solutions Architect – Professional", "year": "2023", "org": "Amazon" },
+    { "name": "Azure Solutions Architect Expert", "year": "2022", "org": "Microsoft" },
+    { "name": "Google Cloud Professional Architect", "year": "2022", "org": "Google" },
+    { "name": "TOGAF 9 Certified", "year": "2019", "org": "The Open Group" }
+  ]
+}
